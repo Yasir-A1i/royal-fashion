@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+}
+
+:root{
+    --primary: #00A86B;
+}
+
+nav{
+    width: 100vw;
+    background-color: transparent;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--primary);
+    box-shadow:0px 1px 20px 0px #00a86b42;
+}
+nav .logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+nav .search-box{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+nav .search-box .search-input{
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    border-left-color:transparent ;
+}
+
+nav .search-box .search-icon{
+    background-color: var(--primary);
+    height: 70%;
+    width: 40px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .search-box .search-icon img{
+    width: 70%;
+}
+
+.primary-button{
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+}
+.secondary-button{
+    font-size: 1.3rem;
+    padding: 8px;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: white;
+    color: var(--primary);
+    cursor: pointer;
+    border: 3px solid var(--primary);
+}
+nav .about{
+    margin-left: 20px;
+}
+nav .button{
+    align-self: flex-end;
+}
+
+
+@media screen and (max-width:1470px) {
+    nav .search-box{
+        width: 70%;
+    }
+}
+@media screen and (max-width:1220px) {
+    nav .search-box{
+        width: 60%;
+    }
+}
+@media screen and (max-width:950px) {
+    nav .button .secondary-button{
+        opacity:  0;
+    }
+}
+@media screen and (max-width:600px) {
+    nav .search-box .search-input{
+        width: 100%;
+    }
+    nav .search-box{
+        width: 80%;
+    }
+    nav .search-box .search-input{
+        width: 100%;
+    }
+    nav .button{
+        display: none;
+    }
+}
