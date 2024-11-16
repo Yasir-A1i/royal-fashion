@@ -9,6 +9,9 @@
 :root{
     --primary: #00A86B;
 }
+button{
+    cursor: pointer;
+}
 
 nav{
     width: 100vw;
@@ -114,6 +117,13 @@ nav .button{
 
 button:hover{
     box-shadow: 5px 5px 20px 0px #00000030;
+    background-color: #01c57d;
+}
+
+.secondary-button:hover{
+    background-color: transparent;
+    border-color: #01c57d;
+    color: #01c57d;
 }
 
 
@@ -213,8 +223,10 @@ main{
     width: 90vw;
     margin: auto;
     height: auto;
-    padding: 20px;
-    background-color: rebeccapurple;
+    padding: 50px 20px;
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
 }
 .card{
     width: 200px;
@@ -222,18 +234,43 @@ main{
     background-color: beige;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0px 12px 11px #0000003b;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+.card:hover{
+    box-shadow: 0px -12px 11px #0000003b;
+    border: 1px solid rgba(0, 0, 0, 0.132);
 }
 .imageSection{
     width: 100%;
     height: 200px;
     background: rgb(229,101,56);
-background: linear-gradient(357deg, rgba(229,101,56,1) 5%, rgba(0,212,255,0) 100%);
-    border-bottom-left-radius: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+background: linear-gradient(357deg, rgba(229,101,56,1) 5%, rgba(0,212,255,0) 60%);
+border-bottom-left-radius: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
+
+/*! Different colors for Different Products */
+
+.fogg .imageSection{
+    background:#532176;
+    background: linear-gradient(357deg,#532176 5%, rgba(0,212,255,0) 60%);
+}
+.fogg .imageSection::after{
+    background-color: #532176;
+}
+.skin-perfect .imageSection{
+    background:#532176;
+    background: linear-gradient(357deg,#cfb766 5%, rgba(0,212,255,0) 60%);
+}
+.skin-perfect .imageSection::after{
+    background-color: #cfb766;
+}
+
 .imageSection::after{
     content: '';
     width: 30px;
@@ -282,4 +319,12 @@ background: linear-gradient(357deg, rgba(229,101,56,1) 5%, rgba(0,212,255,0) 100
     color: var(--primary);
     font-weight: 600;
     display: inline-block;
+}
+.buy-button{
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: var(--primary);
+    color: white;
 }
